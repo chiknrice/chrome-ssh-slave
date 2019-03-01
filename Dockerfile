@@ -36,7 +36,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 ENV DISPLAY :99
 
 # Copy start-slave wrapper script
-COPY files/start-slave /usr/local/bin/start-slave.sh
+COPY files/start-slave.sh /usr/local/bin/start-slave.sh
 RUN chmod a+rx /usr/local/bin/start-slave.sh
 
 ENTRYPOINT ["start-slave.sh"]
